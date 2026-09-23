@@ -19,8 +19,8 @@ app.use(express.json());
 // create transporter
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 465,                  
-  secure: true,               
+  port: 587,                  
+  secure: false,               
   auth: {
     user: process.env.WEB_EVENING_TECH_EMAIL_USER,
     pass: process.env.WEB_EVENING_TECH_EMAIL_PASS,
