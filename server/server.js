@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  origin: "https://web-evening-tech-server.onrender.com" || "http://localhost:5173",
   methods: ["GET", "POST"],
   credentials: true
 }));
