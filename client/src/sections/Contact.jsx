@@ -38,7 +38,7 @@ function Contact() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/contact", form);
+      await axios.post("https://web-evening-tech-server.onrender.com/api/contact", form);
       alert("Message sent successfully!");
       setForm({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
