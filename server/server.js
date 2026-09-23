@@ -18,12 +18,27 @@ app.use(express.json());
 
 // create transporter
 const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 465,                  
+  secure: true,               
+  auth: {
+    user: process.env.WEB_EVENING_TECH_EMAIL_USER,
+    pass: process.env.WEB_EVENING_TECH_EMAIL_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false
+  }
+});
+
+/*
+const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.WEB_EVENING_TECH_EMAIL_USER,
     pass: process.env.WEB_EVENING_TECH_EMAIL_PASS,
   },
 });
+*/
 
 // UPDATED ROUTE WITH BASIC VALIDATION
 app.post("/api/contact", async (req, res) => {
