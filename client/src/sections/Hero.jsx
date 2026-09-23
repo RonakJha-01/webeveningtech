@@ -49,7 +49,7 @@ function Hero() {
   }, [terminalMessages.length]);
 
   // WhatsApp deep link — same as the floating button
-  const phoneNumber = "919XXXXXXXXX";
+  const phoneNumber = "919408715355";
   const waMessage = "Hi, I want to build a website for my business";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     waMessage
