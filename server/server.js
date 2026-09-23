@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: "https://web-evening-tech-server.onrender.com" || "http://localhost:5173",
+  origin: "https://web-evening-tech.onrender.com" || "http://localhost:5173",
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -67,8 +67,5 @@ app.post("/api/contact", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("Server is up and running!");
 });
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
