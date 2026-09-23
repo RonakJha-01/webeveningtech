@@ -1,5 +1,4 @@
 import express from "express";
-import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
@@ -15,20 +14,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// DB connect
-mongoose.connect(process.env.WEB_EVENING_TECH_MONGO_URI)
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
 
-// UPDATED SCHEMA
-const contactSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  phone: String, 
-  message: String,
-}, { timestamps: true });
-
-const Contact = mongoose.model("Contact", contactSchema);
 
 // create transporter
 const transporter = nodemailer.createTransport({
@@ -76,5 +62,13 @@ app.post("/api/contact", async (req, res) => {
     res.status(500).json({ error: "Email not sent" });
   }
 });
+
+
+app.get("/", (req, res) => {
+  res.send("Server is up and running!");
+});
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
