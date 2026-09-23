@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import Services from "./sections/services";
 import Templates from "./sections/Templates";
-import Contact from "./sections/Contact";
+// import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -13,7 +13,7 @@ function App() {
       <Hero />
       <Services />
       <Templates />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
       <WhatsAppButton />
     </div>

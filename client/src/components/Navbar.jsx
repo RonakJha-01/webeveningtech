@@ -37,7 +37,7 @@ function Navbar() {
     { label: "Home", target: "home" },
     { label: "Services", target: "services" },
     { label: "Templates", target: "templates" },
-    { label: "Contact", target: "contact" },
+    /*{ label: "Contact", target: "contact" },*/
   ];
 
   // Smooth scroll to the section, accounting for the fixed navbar height
